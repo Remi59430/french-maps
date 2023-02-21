@@ -1,7 +1,4 @@
-// Bouton Jouer //
-var button_play = document.querySelector('#button_play');
-var french_map = document.querySelector('#french_map');
-french_map.hidden = true;
+// Variables déclarées //
 var FR_GES = document.querySelector('#FR-GES');
 var FR_NAQ = document.querySelector('#FR-NAQ');
 var FR_ARA = document.querySelector('#FR-ARA');
@@ -15,20 +12,34 @@ var FR_NOR = document.querySelector('#FR-NOR');
 var FR_PDL = document.querySelector('#FR-PDL');
 var FR_PAC = document.querySelector('#FR-PAC');
 var FR_IDF = document.querySelector('#FR-IDF');
+var french_map = document.querySelector('#french_map');
+french_map.hidden = true;
+var button_play = document.querySelector('#button_replay');
+button_replay.hidden = true;
 
 
 // Tableau des régions //
 region_table = [FR_GES.getAttribute('title'), FR_NAQ.getAttribute('title'), FR_ARA.getAttribute('title'), FR_BFC.getAttribute('title'), FR_BRE.getAttribute('title'), FR_CVL.getAttribute('title'), FR_COR.getAttribute('title'), FR_OCC.getAttribute('title'), FR_HDF.getAttribute('title'), FR_NOR.getAttribute('title'), FR_PDL.getAttribute('title'), FR_PAC.getAttribute('title'), FR_IDF.getAttribute('title')];
 
+// Bouton Jouer //
+var button_play = document.querySelector('#button_play');
+
 button_play.addEventListener('click', event =>{
     french_map.hidden = false;
 
     // Formule Région Aléatoire //
-    var random_region = region_table[Math.floor(Math.random() * region_table.length)];
+    random_region = region_table[Math.floor(Math.random() * region_table.length)];
     
     // Question //
-   
     region.innerHTML = '<p>Où se trouve la région ' + random_region + ' ?</p>';
+
+    button_play.disabled = true;
+
+    button_replay.hidden = false;
+     
+    button_replay.addEventListener('click', event =>{
+        window.location.reload();
+    }) 
 })
 
 // Informations sur les régions //
@@ -37,7 +48,6 @@ var information = document.querySelector('#information');
 // Clics sur les Régions//
 FR_GES.addEventListener('click', event =>{
     information.innerHTML = '<p>Région Grand Est<br><br>Population 5 562 651 habitants<br>Densité 97 habitants/km²</p>';
-    
 })
 
 FR_NAQ.addEventListener('click', event =>{
@@ -87,3 +97,4 @@ FR_PDL.addEventListener('click', event =>{
 FR_PAC.addEventListener('click', event =>{
     information.innerHTML = '<p>Provence Alpes Côte d\'Azur<br><br>Population 5 098 666 habitants<br>Densité 162 habitants/km²</p>';
 })
+
