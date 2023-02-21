@@ -16,6 +16,7 @@ var french_map = document.querySelector('#french_map');
 french_map.hidden = true;
 var button_play = document.querySelector('#button_replay');
 button_replay.hidden = true;
+var click_on_map = document.querySelector('g');
 
 
 // Tableau des régions //
@@ -35,7 +36,10 @@ button_play.addEventListener('click', event =>{
 
     button_play.disabled = true;
 
-    button_replay.hidden = false;
+    click_on_map.addEventListener('click', event =>{
+        button_replay.hidden = false;
+    }) 
+    
      
     button_replay.addEventListener('click', event =>{
         window.location.reload();
