@@ -1,0 +1,57 @@
+#FR-GES, #FR-NAQ, #FR-ARA, #FR-BFC, #FR-BRE, #FR-CVL, #FR-COR, #FR-OCC, #FR-HDF, #FR-NOR, #FR-PDL, #FR-PAC, #FR-IDF{
+    fill: lightgray;
+}
+
+#FR-GES:hover{
+    fill: blue;
+}
+
+#FR-NAQ:hover{
+    fill: red;
+}
+
+#FR-ARA:hover{
+    fill: green;
+}
+
+#FR-BFC:hover{
+    fill: yellow;
+}
+
+#FR-BRE:hover{
+    fill: purple;
+}
+
+#FR-CVL:hover{
+    fill: orange;
+}
+
+#FR-COR:hover{
+    fill: pink;
+}
+
+#FR-OCC:hover{
+    fill: burlywood;
+}
+
+#FR-HDF:hover{
+    fill: black;
+}
+
+#FR-NOR:hover{
+    fill: indigo;
+}
+
+#FR-PDL:hover{ 
+    fill: lightgreen;
+}
+
+
+#FR-PAC:hover{
+    fill: lightcyan;
+}
+
+
+#FR-IDF:hover{
+    fill: lightcoral;
+}
