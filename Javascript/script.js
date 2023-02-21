@@ -36,10 +36,6 @@ button_play.addEventListener('click', event =>{
     region.innerHTML = '<p>Où se trouve la région ' + random_region + ' ?</p>';
 
     button_play.disabled = true;
-
-    // click_on_map.addEventListener('click', event =>{
-    //     button_replay.hidden = false;
-    // }) 
     
     button_replay.addEventListener('click', event =>{
         window.location.reload();
