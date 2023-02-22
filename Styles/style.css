@@ -6,7 +6,15 @@
     fill: blue;
 }
 
+.selected_FR_GES_win{
+    fill: blue;
+}
+
 #FR-NAQ:hover{
+    fill: red;
+}
+
+.selected_FR_NAQ_win{
     fill: red;
 }
 
@@ -14,7 +22,15 @@
     fill: green;
 }
 
+.selected_FR_ARA_win{
+    fill: green;
+}
+
 #FR-BFC:hover{
+    fill: yellow;
+}
+
+.selected_FR_BFC_win{
     fill: yellow;
 }
 
@@ -22,7 +38,15 @@
     fill: purple;
 }
 
+.selected_FR_BRE_win{
+    fill: purple;
+}
+
 #FR-CVL:hover{
+    fill: orange;
+}
+
+.selected_FR_CVL_win{
     fill: orange;
 }
 
@@ -30,7 +54,15 @@
     fill: pink;
 }
 
+.selected_FR_COR_win{
+    fill: pink;
+}
+
 #FR-OCC:hover{
+    fill: burlywood;
+}
+
+.selected_FR_OCC_win{
     fill: burlywood;
 }
 
@@ -38,11 +70,23 @@
     fill: black;
 }
 
+.selected_FR_HDF_win{
+    fill: black;
+}
+
 #FR-NOR:hover{
     fill: indigo;
 }
 
+.selected_FR_NOR_win{
+    fill: indigo;
+}
+
 #FR-PDL:hover{ 
+    fill: lightgreen;
+}
+
+.selected_FR_PDL_win{
     fill: lightgreen;
 }
 
@@ -51,7 +95,20 @@
     fill: darkcyan;
 }
 
+.selected_FR_PAC_win{
+    fill: darkcyan;
+}
+
 
 #FR-IDF:hover{
     fill: lightcoral;
 }
+
+.selected_FR_IDF_win{
+    fill: lightcoral;
+}
+
+.disabled_map{
+    pointer-events: none;
+}
+

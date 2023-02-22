@@ -16,9 +16,8 @@ var french_map = document.querySelector('#french_map');
 french_map.hidden = true;
 var button_play = document.querySelector('#button_replay');
 button_replay.hidden = true;
-var click_on_map = document.querySelector('#map');
+var map = document.querySelector('#map');
 var result = document.querySelector('#result');
-
 
 // Tableau des régions //
 region_table = [FR_GES.getAttribute('title'), FR_NAQ.getAttribute('title'), FR_ARA.getAttribute('title'), FR_BFC.getAttribute('title'), FR_BRE.getAttribute('title'), FR_CVL.getAttribute('title'), FR_COR.getAttribute('title'), FR_OCC.getAttribute('title'), FR_HDF.getAttribute('title'), FR_NOR.getAttribute('title'), FR_PDL.getAttribute('title'), FR_PAC.getAttribute('title'), FR_IDF.getAttribute('title')];
@@ -36,17 +35,14 @@ button_play.addEventListener('click', event =>{
     region.innerHTML = '<p>Où se trouve la région ' + random_region + ' ?</p>';
 
     button_play.disabled = true;
-    
-    button_replay.addEventListener('click', event =>{
-        window.location.reload();
-    }) 
+
 
     // Informations sur les régions //
     var information = document.querySelector('#information');
 
     // Variables Résultats //
-    const win = '<p class="border border-success rounded-3 border-2 py-1 px-2">Gagné !</p>';
-    const loose = '<p class="border border-warning rounded-3 border-2 py-1 px-2">Perdu !</p>';
+    var win = '<p class="border border-success rounded-3 border-2 py-1 px-2">Gagné !</p>';
+    var loose = '<p class="border border-warning rounded-3 border-2 py-1 px-2">Perdu !</p>';
 
     // Clics sur les Régions//
     FR_GES.addEventListener('click', event =>{
@@ -55,8 +51,10 @@ button_play.addEventListener('click', event =>{
         if(FR_GES.getAttribute('title') == random_region){
             result.innerHTML = win;
             button_replay.hidden = false;
-        }
-
+            map.classList.add('disabled_map');
+            FR_GES.classList.add('selected_FR_GES_win');
+        } 
+        
         else{
             result.innerHTML = loose;
         }
@@ -68,6 +66,8 @@ button_play.addEventListener('click', event =>{
         if(FR_NAQ.getAttribute('title') == random_region){
             result.innerHTML = win;
             button_replay.hidden = false;
+            FR_NAQ.classList.add('selected_FR_NAQ_win');
+            map.classList.add('disabled_map');
         }
 
         else{
@@ -81,6 +81,8 @@ button_play.addEventListener('click', event =>{
         if(FR_ARA.getAttribute('title') == random_region){
             result.innerHTML = win;
             button_replay.hidden = false;
+            FR_ARA.classList.add('selected_FR_ARA_win');
+            map.classList.add('disabled_map');
         }
 
         else{
@@ -94,6 +96,8 @@ button_play.addEventListener('click', event =>{
         if(FR_BFC.getAttribute('title') == random_region){
             result.innerHTML = win;
             button_replay.hidden = false;
+            FR_BFC.classList.add('selected_FR_BFC_win');
+            map.classList.add('disabled_map');
         }
 
         else{
@@ -107,6 +111,8 @@ button_play.addEventListener('click', event =>{
         if(FR_BRE.getAttribute('title') == random_region){
             result.innerHTML = win;
             button_replay.hidden = false;
+            FR_BRE.classList.add('selected_FR_BRE_win');
+            map.classList.add('disabled_map');
         }
 
         else{
@@ -120,6 +126,8 @@ button_play.addEventListener('click', event =>{
         if(FR_CVL.getAttribute('title') == random_region){
             result.innerHTML = win;
             button_replay.hidden = false;
+            FR_CVL.classList.add('selected_FR_CVL_win');
+            map.classList.add('disabled_map');
         }
 
         else{
@@ -133,6 +141,8 @@ button_play.addEventListener('click', event =>{
         if(FR_COR.getAttribute('title') == random_region){
             result.innerHTML = win;
             button_replay.hidden = false;
+            FR_COR.classList.add('selected_FR_COR_win');
+            map.classList.add('disabled_map');
         }
 
         else{
@@ -146,6 +156,8 @@ button_play.addEventListener('click', event =>{
         if(FR_IDF.getAttribute('title') == random_region){
             result.innerHTML = win;
             button_replay.hidden = false;
+            FR_IDF.classList.add('selected_FR_IDF_win');
+            map.classList.add('disabled_map');
         }
 
         else{
@@ -159,6 +171,8 @@ button_play.addEventListener('click', event =>{
         if(FR_OCC.getAttribute('title') == random_region){
             result.innerHTML = win;
             button_replay.hidden = false;
+            FR_OCC.classList.add('selected_FR_OCC_win');
+            map.classList.add('disabled_map');
         }
 
         else{
@@ -172,6 +186,8 @@ button_play.addEventListener('click', event =>{
         if(FR_HDF.getAttribute('title') == random_region){
             result.innerHTML = win;
             button_replay.hidden = false;
+            FR_HDF.classList.add('selected_FR_HDF_win');
+            map.classList.add('disabled_map');
         }
 
         else{
@@ -185,6 +201,8 @@ button_play.addEventListener('click', event =>{
         if(FR_NOR.getAttribute('title') == random_region){
             result.innerHTML = win;
             button_replay.hidden = false;
+            FR_NOR.classList.add('selected_FR_NOR_win');
+            map.classList.add('disabled_map');
         }
 
         else{
@@ -198,6 +216,8 @@ button_play.addEventListener('click', event =>{
         if(FR_PDL.getAttribute('title') == random_region){
             result.innerHTML = win;
             button_replay.hidden = false;
+            FR_PDL.classList.add('selected_FR_PDL_win');
+            map.classList.add('disabled_map');
         }
 
         else{
@@ -211,12 +231,19 @@ button_play.addEventListener('click', event =>{
         if(FR_PAC.getAttribute('title') == random_region){
             result.innerHTML = win;
             button_replay.hidden = false;
+            FR_PAC.classList.add('selected_FR_PAC_win');
+            map.classList.add('disabled_map');
         }
 
         else{
             result.innerHTML = loose;
         }
     })
+    
+
+    button_replay.addEventListener('click', event =>{
+        window.location.reload();
+    }) 
 })
 
 
